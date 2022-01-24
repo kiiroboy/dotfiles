@@ -1,0 +1,1 @@
+/home/tath2701/.config/nvim/init.vim
