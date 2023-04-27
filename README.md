@@ -7,7 +7,7 @@ git clone https://github.com/tath2701/dotfiles
 cd dotfiles
 ```
 
-The script creates symlinks into ``$HOME/.config``. **the script will overwrite the existing files/links**, make sure to handle the conflicts.
+The script injects symlinks into ``$HOME/.config``. **the script will overwrite the existing files/links**, make sure to handle the conflicts.
 ```
 ./install.sh
 ```
