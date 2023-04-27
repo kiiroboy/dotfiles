@@ -1,4 +1,4 @@
-#Dotfiles
+# Dotfiles
 ![Thumbnail](https://raw.githubusercontent.com/tath2701/dotfiles/main/misc/assets/dotfile_thumbnail.png)
 ## Supported OS
 - :white_check_mark: macOS 
