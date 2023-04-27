@@ -1,5 +1,5 @@
 # dotfiles
-![Thumbnail][https://raw.githubusercontent.com/tath2701/dotfiles/main/misc/assets/dotfile_thumbnail.png]
+![Thumbnail][https://raw.githubusercontent.com/tath2701/dotfiles/main/misc/assets/dotfile_thumbnail.png?raw=true]
 # Installation
 Clone the repository
 ```
