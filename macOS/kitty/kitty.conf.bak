@@ -1,0 +1,18 @@
+macos_option_as_alt yes
+font_family Comic Code
+window_padding_width 4
+font_size 16
+background_opacity 0.9
+tab_bar_min_tabs            2
+tab_bar_style               powerline
+tab_bar_edge                bottom
+# tab_powerline_style         round
+tab_title_template          "{index}: {title.split(' ')[-1][title.rfind('/')+1:]}"
+hide_window_decorations titlebar-only
+
+remember_window_size
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+include current-theme.conf
+# END_KITTY_THEME
+
