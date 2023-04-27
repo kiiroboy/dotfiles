@@ -1,9 +1,9 @@
 # dotfiles
 ![Thumbnail](https://raw.githubusercontent.com/tath2701/dotfiles/main/misc/assets/dotfile_thumbnail.png)
 # Supported OS
-- :heavy_check_mark: macOS 
-- [ ] Linux
-- [ ] Windows
+- :white_check_mark macOS 
+- :white_large_square Linux 
+- :white_large_square Windows
 
 # Installation
 Clone the repository
