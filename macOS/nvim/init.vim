@@ -10,7 +10,7 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
-lua require('config')
+lua require('setup')
 colorscheme catppuccin-mocha
 
 filetype plugin indent on
