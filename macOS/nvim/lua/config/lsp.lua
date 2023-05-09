@@ -1,7 +1,11 @@
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
 local util = require 'lspconfig.util'
-
+lspconfig.tsserver.setup {
+    on_attach = on_attach,
+    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+    cmd= { 'typescript-language-server', '--stdio' }
+}
 lspconfig.pyright.setup{}
 configs.solidity = {
   default_config = {
@@ -23,5 +27,4 @@ configs.solidity = {
     single_file_support = true,
   },
 }
---lspconfig.solidity.setup {}
 

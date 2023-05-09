@@ -17,7 +17,7 @@ local config = {
     use_fancy_tab_bar = false,
 	tab_bar_at_bottom = true,
 	tab_max_width = 32,
-	--hide_tab_bar_if_only_one_tab = true,
+	hide_tab_bar_if_only_one_tab = true,
     
     max_fps = 120,
 
@@ -32,8 +32,8 @@ local config = {
     window_background_opacity = 0.75,
     macos_window_background_blur = 20,
     window_frame = {
-    border_left_width = '0.1cell',
-    border_right_width = '0.1cell',
+        border_left_width = '0.1cell',
+        border_right_width = '0.1cell',
     border_bottom_height = '0.05cell',
     border_top_height = '0.05cell',
     border_left_color = '#f5e0dc',

@@ -9,6 +9,7 @@ Plug 'goolord/alpha-nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'windwp/nvim-ts-autotag'
 call plug#end()
 lua require('setup')
 colorscheme catppuccin-mocha
