@@ -8,7 +8,7 @@ require'nvim-treesitter.configs'.setup {
         },
     },
     ensure_installed = { "c", "lua", "vim", "python", "solidity" },
-    -- auto_install = true,
+    auto_install = true,
     ignore_install = { "phpdoc" },
     highlight = {
         enable = true,

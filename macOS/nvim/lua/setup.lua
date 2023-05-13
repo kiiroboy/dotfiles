@@ -1,6 +1,0 @@
-require'config/nvim-treesitter'
-require'config/lualine'
-require'config/fzf-lua'
-require'config/alpha'
-require'config/toggleterm'
-require'config/lsp'

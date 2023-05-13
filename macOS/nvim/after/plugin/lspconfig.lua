@@ -1,19 +1,19 @@
 local lspconfig = require 'lspconfig'
 local configs = require 'lspconfig.configs'
-local util = require 'lspconfig.util'
+
 lspconfig.tsserver.setup {
     on_attach = on_attach,
     filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
     cmd= { 'typescript-language-server', '--stdio' }
 }
 lspconfig.pyright.setup{}
-configs.solidity = {
+lspconfig.solidity = {
   default_config = {
     cmd = { 'solidity-ls', '--stdio' },
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { 'solidity' },
-    root_dir = util.root_pattern("brownie-config.yaml", ".git"),
+    root_dir = lspconfig.util.root_pattern("brownie-config.yaml", ".git"),
     settings = {
     -- example of global remapping
         solidity = { 
@@ -28,3 +28,4 @@ configs.solidity = {
   },
 }
 
+lspconfig.gopls.setup{}
