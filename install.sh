@@ -1,10 +1,11 @@
 #! /bin/bash
 
+BASEDIR=$(readlink -f $0 | xargs dirname)
+macOS=('karabiner' 'nvim' 'neofetch' 'tmux' 'wezterm')
 installOSX() {
-    BASEDIR=$(readlink -f $0 | xargs dirname)
-    for d in $BASEDIR/macOS/*; do
-        ln -sf $d $HOME/.config
-    done
+	for i in ${macOS[@]}; do
+		ln -sf $BASEDIR/$i $HOME/.config
+	done
 }
 
 install() {
@@ -14,4 +15,5 @@ install() {
       *)        echo "unknown: $OSTYPE" ;;
     esac
 }
+
 install

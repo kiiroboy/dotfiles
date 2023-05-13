@@ -1,3 +1,3 @@
-macOS/nvim/plugin/*
-macOS/tmux/plugins/*
+*nvim/plugin/*
+*tmux/plugins/*
 
