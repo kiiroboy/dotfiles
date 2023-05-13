@@ -12,7 +12,7 @@ git clone https://github.com/tath2701/dotfiles
 cd dotfiles
 ```
 
-Run the script to symlink appropriate files from current directory into ``$HOME/.config``. **the script will overwrite the existing files/links**, make sure to handle the conflicts.
+Run the script to symlink appropriate files from current directory into ``$HOME/.config``. **The script will overwrite the existing files/links**, make sure to handle the conflicts before start the script.
 ```
 ./install.sh
 ```
