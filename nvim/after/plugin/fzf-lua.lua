@@ -1,11 +1,11 @@
 require'fzf-lua'.setup {
-    winopts = { -- Only valid when using a float window
-        preview = {
-          cmd = 'cat',
-          --wrap = 'nowrap',
-          --vertical = 'up:80%',
-        }
-    },
+    --winopts = { -- Only valid when using a float window
+    --    preview = {
+    --      cmd = 'cat',
+    --      --wrap = 'nowrap',
+    --      --vertical = 'up:80%',
+    --    }
+    --},
     files = {
         cmd = 'fd -H',
     },

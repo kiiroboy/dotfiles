@@ -2,7 +2,11 @@ local saga = require'lspsaga'
 saga.setup {
   server_filetype_map = {
     typescript = 'typescript',
+  },
+  symbol_in_winbar={
+	  enable=false
   }
+
 }
 
 local opts = { noremap = true, silent = true }
