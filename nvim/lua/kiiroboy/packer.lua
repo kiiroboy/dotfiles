@@ -28,10 +28,6 @@ return require('packer').startup(function(use)
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
 
-	use {
-		"akinsho/toggleterm.nvim", tag = '*', 
-	}
-
 	use { "catppuccin/nvim", as = "catppuccin" }
 
 	use 'neovim/nvim-lspconfig'
@@ -65,6 +61,11 @@ return require('packer').startup(function(use)
 			{"nvim-treesitter/nvim-treesitter"}
 		}
 	})
+
+    use {
+        'stevearc/oil.nvim',
+        config = function() require('oil').setup() end
+    }
 
 end)
 

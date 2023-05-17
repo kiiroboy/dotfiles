@@ -13,7 +13,6 @@ local colors = {
 	green = '#a6e3a1',
 	blue = '#80A7EA',
 }
-
 local theme = {
 	normal = {
 		a = { fg = colors.black, bg = colors.blue },
@@ -73,14 +72,10 @@ local tabs = {
 	separator = { left = "", right = "" },
 }
 
-local bar = {
-	require('lspsaga.symbolwinbar'):get_winbar(),
-	separator = { left = "", right = "" },
-}
 local fileformat = {
 	'fileformat',
 	color = { bg = "#b4befe", fg = "#313244" },
-	separator = { left = "", right = "" },
+	separator = { left = "", right = "█" },
 }
 
 local encoding = {
@@ -97,14 +92,22 @@ local branch = {
 
 local diff = {
 	"diff",
+	diff_color = {
+	  added = { fg = "#99c794" },
+	  modified = { fg = "#5bb7b8" },
+	  removed = { fg = "#ec5f67" },
+    },
 	color = { bg = "#313244", fg = "#313244" },
 	separator = { left = "", right = "" },
 }
 
 local modes = {
 	'mode', fmt = function(str) return str:sub(1, 1) end,
-	color = { bg = "#fab387		", fg = "#1e1e2e" },
-	separator = { left = "", right = "" },
+	color = { bg = "#fab387", fg = "#1e1e2e" },
+	--separator = { left = "", right = "" },
+	separator = { left = "█", right = "" },
+	
+	
 }
 
 local function getLspName()
@@ -167,11 +170,10 @@ require('lualine').setup {
 		},
 		lualine_b = {
 			space,
-
 		},
 		lualine_c = {
-			filetype,
 			filename,
+			filetype,
 			space,
 			branch,
 			diff,
