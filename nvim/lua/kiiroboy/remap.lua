@@ -5,6 +5,8 @@ local opts = { silent = true, noremap=true}
 vim.keymap.set("i","{", "{}<left>", opts)
 vim.keymap.set("n","Q", "<Nop>")
 vim.keymap.set("n","q", "<Nop>")
+vim.keymap.set("n","[", "}")
+vim.keymap.set("n","]", "{")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
@@ -27,4 +29,3 @@ vim.keymap.set("n", "<leader>Y", "\"+Y",opts)
 vim.keymap.set("n", "<leader>d", "\"_d",opts)
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", opts)
 vim.keymap.set({"n"}, "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
