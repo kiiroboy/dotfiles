@@ -4,6 +4,8 @@ local catppuccin = require 'customCat'
 local config = {
     --font = wezterm.font('Comic Code', {stretch='Normal'}),
     freetype_load_flags = "NO_HINTING",
+    initial_rows = 50,
+    initial_cols = 150,
     font = wezterm.font_with_fallback { {family='Comic Code'}, 'MesloLGS NF'},
     font_size = 16.5,
     window_decorations = "RESIZE",
