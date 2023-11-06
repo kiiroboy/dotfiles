@@ -5,6 +5,7 @@
 - :white_large_square: Linux (TBA)
 - :white_large_square: Windows (TBA)
 
+
 ## Installation
 Clone the repository
 ```
@@ -17,4 +18,13 @@ Run the script to symlink appropriate files from current directory into ``$HOME/
 ./install.sh
 ```
 
+## Neovim Setup
+install Packer.nvim
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
 
+install fd for folder searching
+
+install rg for better find searching

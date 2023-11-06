@@ -30,18 +30,10 @@ local config = {
     adjust_window_size_when_changing_font_size = false,
     send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = false,
-    window_background_opacity = 0.75,
-    macos_window_background_blur = 20,
-    window_frame = {
-        border_left_width = '0.2cell',
-        border_right_width = '0.2cell',
-    border_bottom_height = '0.1cell',
-    border_top_height = '0.1cell',
-    border_left_color = '#f5e0dc',
-    border_right_color = '#f5e0dc',
-    border_bottom_color = '#f5e0dc',
-    border_top_color = '#f5e0dc',
-    },
+    
+    --window_background_opacity = 0.75,
+    --macos_window_background_blur = 20,
+
 }
 local opt = {
     flavor = "mocha",

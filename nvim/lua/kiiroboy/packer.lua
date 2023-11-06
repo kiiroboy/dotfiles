@@ -32,37 +32,8 @@ return require('packer').startup(function(use)
 
 	use { "catppuccin/nvim", as = "catppuccin" }
 
-	use 'neovim/nvim-lspconfig'
-
-	use 'hrsh7th/cmp-nvim-lsp'
-
-	use 'hrsh7th/cmp-buffer'
-	
-	use 'hrsh7th/cmp-path'
-
-	use 'hrsh7th/cmp-cmdline'
-
-	use 'hrsh7th/nvim-cmp'
-
-	use 'onsails/lspkind.nvim'
 
 	use 'windwp/nvim-ts-autotag'
-
-	use({
-		"L3MON4D3/LuaSnip",
-		-- follow latest release.
-		tag = "v1.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-		-- install jsregexp (optional!:).
-		run = "make install_jsregexp"
-	})
-	use({
-		"nvimdev/lspsaga.nvim",
-		requires = {
-			{"nvim-tree/nvim-web-devicons"},
-			--Please make sure you install markdown and markdown_inline parser
-			{"nvim-treesitter/nvim-treesitter"}
-		}
-	})
 
     use {
         'stevearc/oil.nvim',
