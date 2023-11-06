@@ -23,6 +23,8 @@ return require('packer').startup(function(use)
 		requires = { 'nvim-tree/nvim-web-devicons' }
 	}
 
+    use { 'junegunn/fzf', run = ":call fzf#install()" }
+
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
