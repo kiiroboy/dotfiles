@@ -8,7 +8,7 @@ local config = {
     initial_cols = 150,
     font = wezterm.font_with_fallback { {family='Comic Code'}, 'MesloLGS NF'},
     font_size = 16.5,
-    window_decorations = "RESIZE",
+    --window_decorations = "RESIZE",
 	inactive_pane_hsb = {
 		saturation = 1.0,
 		brightness = 0.8,
