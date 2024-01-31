@@ -18,6 +18,10 @@ Run the script to symlink appropriate files from current directory into ``$HOME/
 ./install.sh
 ```
 
+## Font
+Comic Code
+https://github.com/romkatv/powerlevel10k/blob/master/font.md
+
 ## Neovim Setup
 install Packer.nvim
 ```
