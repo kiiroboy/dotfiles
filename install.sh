@@ -2,7 +2,7 @@
 
 BASEDIR=$(readlink -f $0 | xargs dirname)
 macOSDIR=('nvim' 'neofetch' 'tmux' 'wezterm')
-macOSFILE=('.myzshrc')
+macOSFILE=('.myzshrc' '.p10k.zsh')
 linux=('nvim' 'tmux')
 installOSX() {
         for i in ${macOSDIR[@]}; do
