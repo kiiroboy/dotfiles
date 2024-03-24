@@ -20,7 +20,6 @@ local config = {
 	tab_max_width = 32,
 	hide_tab_bar_if_only_one_tab = true,
     
-    max_fps = 120,
 
     --others
     audible_bell = 'Disabled',

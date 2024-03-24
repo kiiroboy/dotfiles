@@ -25,10 +25,6 @@ return require('packer').startup(function(use)
 
     use { 'junegunn/fzf', run = ":call fzf#install()" }
 
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-	}
 
 	use { "catppuccin/nvim", as = "catppuccin" }
 

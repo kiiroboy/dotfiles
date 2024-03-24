@@ -9,8 +9,8 @@ require("oil").setup({
         ["<leader>`"] = "actions.close",
         ["<leader>u"] = "actions.refresh",
         ["q"] = "actions.parent",
-        ["Q"] = "actions.open_cwd",
-        ["`"] = "actions.cd",
+        ["~"] = "actions.open_cwd",
+        --["`"] = "actions.cd",
  },
   -- Set to false to disable all of the above keymaps
   use_default_keymaps = true,

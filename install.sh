@@ -1,8 +1,8 @@
 #! /bin/bash
 
 BASEDIR=$(readlink -f $0 | xargs dirname)
-macOSDIR=('karabiner' 'nvim' 'neofetch' 'tmux' 'wezterm')
-macOSFILE=('.zshrc')
+macOSDIR=('nvim' 'neofetch' 'tmux' 'wezterm')
+macOSFILE=('.myzshrc')
 linux=('nvim' 'tmux')
 installOSX() {
         for i in ${macOSDIR[@]}; do
@@ -11,6 +11,11 @@ installOSX() {
         for i in ${macOSFILE[@]}; do
                 ln -sf $BASEDIR/$i $HOME/
         done
+        if ! grep -Fxq "source ~/.myzshrc" $HOME/.zshrc
+        then
+            # code if found
+            echo "source ~/.myzshrc" >> ~/.zshrc
+        fi
 }
 
 installLinux() {
