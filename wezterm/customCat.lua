@@ -111,9 +111,9 @@ local colors = {
 		surface2 = "#585b70",
 		surface1 = "#45475a",
 		surface0 = "#313244",
-		base = "#1e1f22",
-		mantle = "#1e1f22",
-		crust = "#1e1f22",
+		base = "#18191A",
+		mantle = "#18191A",
+		crust = "#18191A",
 	},
 }
 

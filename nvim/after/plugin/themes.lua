@@ -32,8 +32,9 @@ require("catppuccin").setup({
     },
     color_overrides = {
         all = {
-            mantle   = "#1e1f22",
-            base     = "#1e1f22",
+            mantle   = "#18191A",
+            base     = "#18191A",
+            crust    = "#18191A"
         }
     },
     custom_highlights = function(colors)
@@ -59,11 +60,11 @@ require("catppuccin").setup({
 
 vim.cmd.colorscheme "catppuccin"
 -- setup must be called before loading
---vim.api.nvim_set_hl(0, "Normal", { ctermbg=NONE, guibg=NONE })
+vim.api.nvim_set_hl(0, "Normal", { ctermbg=NONE, guibg=NONE })
 vim.api.nvim_set_hl(0, "NonText", { ctermbg=NONE, guibg=NONE })
 vim.api.nvim_set_hl(0, "LineNr", { fg='#a6adc8'})
 --vim.api.nvim_set_hl(0, "CursorLine", { ctermbg=NONE, guibg=NONE })
 vim.api.nvim_set_hl(0, "NormalNC", { ctermbg=NONE, guibg=NONE })
---vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg=NONE, guibg=NONE })
+vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg=NONE, guibg=NONE })
 vim.api.nvim_set_hl(0, "Pmenu", { ctermbg=NONE, guibg=NONE })
 vim.cmd([[hi! default link CmpItemKind CmptemMenuDefault]])
