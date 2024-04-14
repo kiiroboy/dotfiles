@@ -2,8 +2,9 @@
 
 BASEDIR=$(readlink -f $0 | xargs dirname)
 macOSDIR=('nvim' 'neofetch' 'tmux' 'wezterm')
-macOSFILE=('.myzshrc' '.p10k.zsh')
+macOSFILE=('.myzshrc' '.p10k.zsh' '.ideavimrc')
 linux=('nvim' 'tmux')
+
 installOSX() {
         for i in ${macOSDIR[@]}; do
                 ln -sf $BASEDIR/$i $HOME/.config

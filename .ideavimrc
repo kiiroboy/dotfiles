@@ -1,0 +1,11 @@
+"map = <Action>(AutoIndentLines)
+nnoremap <silent> Q <Nop>
+nnoremap <silent> q <Nop>
+nnoremap <silent> gq :q!<CR>
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+nnoremap  J <C-d>zz
+nnoremap  K <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
+set nu rnu
