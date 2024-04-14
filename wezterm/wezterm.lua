@@ -7,14 +7,13 @@ local config = {
     initial_rows = 50,
     initial_cols = 150,
     --font = wezterm.font_with_fallback { {family='Monaspace Neon Var'}, 'MesloLGS NF'},
-    font = wezterm.font_with_fallback { {family='Monaspace Neon Var', weight="Regular"}},
+    font = wezterm.font_with_fallback { {family='Monaspace Neon', weight="ExtraLight"}},
     font_size = 16,
     window_decorations = "RESIZE",
 	inactive_pane_hsb = {
 		saturation = 1.0,
 		brightness = 0.8,
 	},
-    line_height=1.1,
 
     -- tab bars
     use_fancy_tab_bar = false,
