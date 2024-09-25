@@ -7,7 +7,7 @@ local config = {
     initial_rows = 50,
     initial_cols = 150,
     --font = wezterm.font_with_fallback { {family='Monaspace Neon Var'}, 'MesloLGS NF'},
-    font = wezterm.font_with_fallback { {family='Monaspace Neon', weight="ExtraLight"}, 'MesloLGS NF'},
+    font = wezterm.font_with_fallback { 'Comic Code', 'MesloLGS NF'},
     font_size = 16,
     window_decorations = "RESIZE",
 	inactive_pane_hsb = {

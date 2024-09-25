@@ -1,7 +1,7 @@
 #! /bin/bash
 
 BASEDIR=$(readlink -f $0 | xargs dirname)
-macOSDIR=('nvim' 'neofetch' 'tmux' 'wezterm')
+macOSDIR=('nvim' 'neofetch' 'tmux' 'wezterm' 'kitty')
 macOSFILE=('.myzshrc' '.p10k.zsh' '.ideavimrc')
 linux=('nvim' 'tmux')
 
