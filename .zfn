@@ -1,0 +1,43 @@
+#!/usr/bin/env zsh
+
+function cd() {
+    builtin cd "$@"  # Run the actual 'cd' command
+
+    # Check if there's no active virtual environment
+    if [[ -z "$VIRTUAL_ENV" ]]; then
+        # If a 'venv' directory exists, activate the virtual environment
+        if [[ -d ./venv ]]; then
+            echo "Activating VENV"
+            source ./venv/bin/activate
+        fi
+    else
+        # Check if the current directory has moved outside the virtual environment directory
+        if [[ "$PWD" != "$VIRTUAL_ENV"* ]]; then
+            echo "Deactivating VENV"
+            deactivate
+        fi
+    fi
+}
+
+# Function to clear the prompt
+function clear_prompt() {
+    builtin echoti civis           # Hide the cursor
+    builtin print -r -- $'\e[H\e[2J'"${(pl:$((LINES-1))::\n:)}"  # Clear the screen
+
+    # Refresh the prompt and clear any pending input
+    builtin zle -I
+    builtin zle -R
+
+    builtin print -r -- $'\e[3J'   # Clear the scrollback buffer
+
+    builtin echoti cnorm           # Restore the cursor
+}
+
+function clear_and_refresh_prompt() {
+    clear_prompt
+    zle reset-prompt
+}
+
+function register_widget() {
+    zle -N clear_and_refresh_prompt  # Register the widget
+}

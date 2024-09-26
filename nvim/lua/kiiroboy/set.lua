@@ -7,7 +7,6 @@ vim.o.smartindent = true
 vim.o.nu=true
 vim.o.rnu=true
 vim.o.hlsearch=true
-vim.o.noshowmode=true
 vim.o.background=dark
 vim.o.cursorline=true
 vim.o.completeopt=menuone,noinsert,noselect

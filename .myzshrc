@@ -1,41 +1,42 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+#!/usr/bin/env zsh
+
+source .zfn
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+trap 'clear_and_refresh_prompt' WINCH
+clear_prompt
+register_widget
+
+# FZF configuration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 setopt PROMPT_SUBST
 
+# History settings
+HISTFILE=$HOME/.cmd_hist
+HISTSIZE=500000
+SAVEHIST=500000
+setopt appendhistory
+setopt INC_APPEND_HISTORY  
+setopt SHARE_HISTORY
+setopt hist_ignore_all_dups
 
+
+# Register the function as a Zsh widget and bind it to Ctrl+L
+bindkey '^L' clear_and_refresh_prompt
+
+# Powerlevel10k instant prompt
 ZLE_RPROMPT_INDENT=0
 
+# Alias and color settings
+export CLICOLOR=1
+export LSCOLORS=CxFxgxexbxegedabagacad
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#18191A,bg:#18191A,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f9e2af \
 --color=marker:#f5e0dc,fg+:#f9e2af,prompt:#cba6f7,hl+:#f38ba8 \
 --with-nth 2.. \
---info=inline --height=50% --layout=reverse --no-separator --no-scrollbar --border\
-"
+--info=hidden --height=100% --margin=1,2 --no-separator --no-scrollbar --border"
 
-#export FZF_DEFAULT_OPTS=" \
-#--color=bg+:#1e1f22,bg:#1e1f22,spinner:#ffffff,hl:#ffffff \
-#--color=fg:#ffffff,header:#ffffff,info:#ffffff,pointer:#ffffff \
-#--color=marker:#ffffff,fg+:#ffffff,prompt:#ffffff,hl+:#ffffff \
-#--with-nth 2.. \
-#"
-
-
-
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-PS1='%F{yellow}%n%f@%F{magenta}%m%f:%F{green}%~ %f%# '
-
-export CLICOLOR=1
-export LSCOLORS=CxFxgxexbxegedabagacad
-alias vim="nvim"
-
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias {vi, vim}="nvim"
+alias clear=clear_prompt
