@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-source .zfn
+source ~/.zfn
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 trap 'clear_and_refresh_prompt' WINCH
