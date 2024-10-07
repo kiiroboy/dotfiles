@@ -24,19 +24,20 @@ setopt hist_ignore_all_dups
 
 # Register the function as a Zsh widget and bind it to Ctrl+L
 bindkey '^L' clear_and_refresh_prompt
+bindkey -s ^f "tmux-sessionizer\n"
 
 # Powerlevel10k instant prompt
 ZLE_RPROMPT_INDENT=0
 
 # Alias and color settings
+export PATH="${PATH}:$HOME/bin"
 export CLICOLOR=1
 export LSCOLORS=CxFxgxexbxegedabagacad
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#18191A,bg:#18191A,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f9e2af \
 --color=marker:#f5e0dc,fg+:#f9e2af,prompt:#cba6f7,hl+:#f38ba8 \
---with-nth 2.. \
---info=hidden --height=100% --margin=1,2 --no-separator --no-scrollbar --border"
+--height=100% --margin=1,2 --no-separator --no-scrollbar --border"
 
 alias {vi, vim}="nvim"
 alias clear=clear_prompt

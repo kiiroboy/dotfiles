@@ -28,7 +28,7 @@ function clear_prompt() {
     builtin zle -I
     builtin zle -R
 
-    builtin print -r -- $'\e[3J'   # Clear the scrollback buffer
+    #builtin print -r -- $'\e[3J'   # Clear the scrollback buffer
 
     builtin echoti cnorm           # Restore the cursor
 }
