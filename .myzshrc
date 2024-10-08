@@ -1,16 +1,24 @@
 #!/usr/bin/env zsh
 
+setopt PROMPT_SP
+setopt ALWAYS_LAST_PROMPT
+setopt PROMPT_SUBST
+
 source ~/.zfn
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 register_widget
-trap 'clear_and_refresh_prompt' WINCH
+
+TRAPWINCH() {
+    clear_and_refresh_prompt
+}
+
+trap 'clear_and_refresh_prompt' USR1
 clear_prompt
 
 # FZF configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-setopt PROMPT_SUBST
 
 # History settings
 HISTFILE=$HOME/.cmd_hist
