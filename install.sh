@@ -1,15 +1,15 @@
 #! /bin/bash
 
 BASEDIR=$(readlink -f $0 | xargs dirname)
-macOSDIR=('nvim' 'neofetch' 'tmux' 'wezterm' 'kitty')
-macOSFILE=('.myzshrc' '.p10k.zsh' '.ideavimrc' '.zfn')
+macOSCONFIG=('nvim' 'neofetch' 'tmux' 'wezterm' 'kitty')
+macOSHOME=('.myzshrc' '.p10k.zsh' '.ideavimrc' '.zfn' 'bin')
 linux=('nvim' 'tmux')
 
 installOSX() {
-        for i in ${macOSDIR[@]}; do
+        for i in ${macOSCONFIG[@]}; do
                 ln -sf $BASEDIR/$i $HOME/.config
         done
-        for i in ${macOSFILE[@]}; do
+        for i in ${macOSHOME[@]}; do
                 ln -sf $BASEDIR/$i $HOME/
         done
         if ! grep -Fxq "source ~/.myzshrc" $HOME/.zshrc
