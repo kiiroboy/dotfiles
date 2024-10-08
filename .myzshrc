@@ -3,9 +3,9 @@
 source ~/.zfn
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+register_widget
 trap 'clear_and_refresh_prompt' WINCH
 clear_prompt
-register_widget
 
 # FZF configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
