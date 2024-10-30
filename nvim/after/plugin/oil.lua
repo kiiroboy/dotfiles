@@ -6,7 +6,7 @@ require("oil").setup({
     keymaps = {
         ["<leader>?"] = "actions.show_help",
         ["<CR>"] = "actions.select",
-        ["<leader>`"] = "actions.close",
+        ["<leader>n"] = "actions.close",
         ["<leader>u"] = "actions.refresh",
         ["q"] = "actions.parent",
         ["~"] = "actions.open_cwd",
@@ -15,4 +15,4 @@ require("oil").setup({
   -- Set to false to disable all of the above keymaps
   use_default_keymaps = true,
 })
-vim.keymap.set("n", "<leader>`", require("oil").open, { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>n", require("oil").open, { desc = "Open parent directory" })

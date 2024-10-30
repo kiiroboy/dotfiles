@@ -1,4 +1,3 @@
-vim.g.mapleader= " "
 vim.wo.fillchars='eob: '
 
 local opts = { silent = true, noremap=true}
@@ -23,6 +22,7 @@ vim.keymap.set("n", "N", "Nzzzv", opts)
 vim.keymap.set("x", "<leader>p", "\"_dP",opts)
 
 -- copy/cut to clipboard
+vim.g.mapleader= " "
 vim.keymap.set("n", "<leader>y", "\"+y",opts)
 vim.keymap.set("v", "<leader>y", "\"+y",opts)
 vim.keymap.set("n", "<leader>Y", "\"+Y",opts)

@@ -5,20 +5,6 @@ setopt ALWAYS_LAST_PROMPT
 setopt PROMPT_SUBST
 
 source ~/.zfn
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-register_widget
-
-TRAPWINCH() {
-    clear_and_refresh_prompt
-}
-
-trap 'clear_and_refresh_prompt' USR1
-clear_prompt
-
-# FZF configuration
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 
 # History settings
 HISTFILE=$HOME/.cmd_hist
@@ -28,12 +14,10 @@ setopt appendhistory
 setopt INC_APPEND_HISTORY  
 setopt SHARE_HISTORY
 setopt hist_ignore_all_dups
-
+ZSH_AUTOSUGGEST_STRATEGY=(history)
 
 # Register the function as a Zsh widget and bind it to Ctrl+L
-bindkey '^L' clear_and_refresh_prompt
 bindkey -s ^f "tmux-sessionizer\n"
-
 # Powerlevel10k instant prompt
 ZLE_RPROMPT_INDENT=0
 
@@ -48,4 +32,3 @@ export FZF_DEFAULT_OPTS=" \
 --height=100% --margin=1,2 --no-info --no-separator --no-scrollbar --border"
 
 alias {vi, vim}="nvim"
-alias clear=clear_prompt

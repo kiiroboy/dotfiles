@@ -1,5 +1,15 @@
 #!/usr/bin/env zsh
 
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# FZF configuration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+preexec() {
+  BUFFER=${BUFFER%%[[:space:]]#}
+}
+
 function cd() {
     builtin cd "$@"  # Run the actual 'cd' command
 
@@ -19,26 +29,3 @@ function cd() {
     fi
 }
 
-# Function to clear the prompt
-function clear_prompt() {
-    builtin echoti civis           # Hide the cursor
-
-    if [[ -n $TMUX ]]; then
-        # If inside tmux, clear tmux's scrollback history
-        tmux clear-history
-    fi
-
-    builtin print -r -- $'\e[H\e[2J'"${(pl:$((LINES-1))::\n:)}"  # Clear the screen
-    builtin print -r -- $'\e[3J'   # Clear the scrollback buffer
-
-    builtin echoti cnorm           # Restore the cursor
-}
-
-function clear_and_refresh_prompt() {
-    clear_prompt
-    zle reset-prompt
-}
-
-function register_widget() {
-    zle -N clear_and_refresh_prompt  # Register the widget
-}
