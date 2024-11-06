@@ -13,3 +13,5 @@ vim.o.completeopt=menuone,noinsert,noselect
 vim.o.updatetime = 50
 vim.o.wrap = false
 vim.cmd([[set mouse=a]])
+vim.o.splitbelow = true
+
