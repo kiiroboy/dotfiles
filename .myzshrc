@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 setopt PROMPT_SP
 setopt ALWAYS_LAST_PROMPT
 setopt PROMPT_SUBST
@@ -18,7 +19,6 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Register the function as a Zsh widget and bind it to Ctrl+L
 bindkey -s ^f "tmux-sessionizer\n"
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZLE_RPROMPT_INDENT=0
 
@@ -32,4 +32,4 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f5e0dc,fg+:#f9e2af,prompt:#cba6f7,hl+:#f38ba8 \
 --layout=reverse --margin=1,2 --no-info --no-separator --no-scrollbar --border"
 
-alias {vi, vim}="nvim"
+alias vim="nvim"
