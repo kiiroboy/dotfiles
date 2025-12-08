@@ -27,9 +27,7 @@ export PATH="${PATH}:$HOME/bin"
 export CLICOLOR=1
 export LSCOLORS=CxFxgxexbxegedabagacad
 export FZF_DEFAULT_OPTS="\
---color=bg+:#18191A,bg:#18191A,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f9e2af \
---color=marker:#f5e0dc,fg+:#f9e2af,prompt:#cba6f7,hl+:#f38ba8 \
+--color=bg+:#18191A,bg:#18191A,spinner:#f5e0dc,hl:#f38ba8,fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f9e2af,marker:#f5e0dc,fg+:#f9e2af,prompt:#cba6f7,hl+:#f38ba8 \
 --layout=reverse --margin=1,2 --no-info --no-separator --no-scrollbar --border --height=30% --min-height=10+"
 
 source <(fzf --zsh)
