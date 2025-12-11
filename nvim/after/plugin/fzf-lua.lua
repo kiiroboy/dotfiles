@@ -3,7 +3,11 @@ require'fzf-lua'.setup {
         info = false,
         preview = {
           scrollbar = false,
-        }
+        },
+    },
+    hls = {
+        border = 'Normal',
+        preview_border = 'Normal'
     },
     fzf_opts = {
     },
@@ -11,6 +15,6 @@ require'fzf-lua'.setup {
         cmd = 'fd -H',
     },
     grep = {
-        rg_opts = "--column --line-number --sort-files --no-heading --color=always --smart-case -g '!{.git,node_modules}/*'",
+        rg_opts = "--column --line-number --sort-files --no-heading --smart-case -g '!{.git,node_modules}/*'",
     },
 }

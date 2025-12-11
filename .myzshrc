@@ -25,9 +25,10 @@ ZLE_RPROMPT_INDENT=0
 # Alias and color settings
 export PATH="${PATH}:$HOME/bin"
 export CLICOLOR=1
-export LSCOLORS=CxFxgxexbxegedabagacad
+export LSCOLORS=cxfxgxexbxegedabagacad
 export FZF_DEFAULT_OPTS="\
---color=bg+:#18191A,bg:#18191A,spinner:#f5e0dc,hl:#f38ba8,fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f9e2af,marker:#f5e0dc,fg+:#f9e2af,prompt:#cba6f7,hl+:#f38ba8 \
---layout=reverse --margin=1,2 --no-info --no-separator --no-scrollbar --border --height=30% --min-height=10+"
+--layout=reverse --margin=1,2 --no-info --no-separator --no-scrollbar --border --height=30% --min-height=10+ \
+--color=gutter:-1,bg+:-1,fg+:-1,pointer:#f9e2af"
+# --color=bg+:#18191A,bg:#18191A,spinner:#f5e0dc,hl:#f38ba8,fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f9e2af,marker:#f5e0dc,fg+:#f9e2af,prompt:#cba6f7,hl+:#f38ba8 \
 
 source <(fzf --zsh)
