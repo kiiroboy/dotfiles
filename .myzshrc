@@ -17,12 +17,11 @@ setopt SHARE_HISTORY
 setopt hist_ignore_all_dups
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-# Register the function as a Zsh widget and bind it to Ctrl+L
-bindkey -s ^f "tmux-sessionizer\n"
-
 ZLE_RPROMPT_INDENT=0
 
 # Alias and color settings
+alias tscc="tmux-sessionizer -CC"
+alias ts="tmux-sessionizer"
 export PATH="${PATH}:$HOME/bin"
 export CLICOLOR=1
 export LSCOLORS=cxfxgxexbxegedabagacad

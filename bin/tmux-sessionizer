@@ -1,8 +1,23 @@
 #!/usr/bin/env bash
 
-if [[ $# -eq 1 ]]; then
-    selected=$1
-else
+# Parse arguments
+use_cc=false
+selected=""
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -CC)
+            use_cc=true
+            shift
+            ;;
+        *)
+            selected=$1
+            shift
+            ;;
+    esac
+done
+
+if [[ -z $selected ]]; then
     selected=$(find ~/workplace/ -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
@@ -13,21 +28,27 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
+# Set tmux command based on -CC flag
+tmux_cmd="tmux"
+if [[ $use_cc == true ]]; then
+    tmux_cmd="tmux -CC"
+fi
+
 # If not inside a tmux session and tmux isn't running, start a new one
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
+    $tmux_cmd new-session -s $selected_name -c $selected
     exit 0
 fi
 
 # Check if the session exists
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
+    $tmux_cmd new-session -ds $selected_name -c $selected
 fi
 
 # If inside a tmux session, switch client
 if [[ -n $TMUX ]]; then
-    tmux switch-client -t $selected_name
+    $tmux_cmd switch-client -t $selected_name
 else
     # If not inside a tmux session, attach to the new session
-    tmux attach-session -t $selected_name
+    $tmux_cmd attach-session -t $selected_name
 fi
