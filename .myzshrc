@@ -19,9 +19,9 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 ZLE_RPROMPT_INDENT=0
 
+bindkey -s ^f "tmux-sessionizer\n"1
+
 # Alias and color settings
-alias tmcc="tmux-sessionizer -CC"
-alias tm="tmux-sessionizer"
 export PATH="${PATH}:$HOME/bin"
 export CLICOLOR=1
 export LSCOLORS=cxfxgxexbxegedabagacad
